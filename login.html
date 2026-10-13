@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page-body">
+  <div class="login-container">
+    <!-- Brand Icon -->
+    <div class="login-brand-m">M</div>
+    <h1 class="login-heading">Welcome Back!</h1>
+    <p class="login-subheading">Sign in to continue to your account.</p>
+
+    <!-- Login Card -->
+    <div class="login-form-card">
+      <h2 class="login-card-title">Login to your account</h2>
+      <p class="login-card-subtitle">Enter your email and password to get started.</p>
+
+      <form id="login-form">
+        <div class="form-field">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input-email" type="email" id="email" name="email" value="hana@gmail.com" required>
+        </div>
+
+        <div class="form-field">
+          <div class="label-between">
+            <label class="form-label" for="password">Password</label>
+            <a class="link-forgot" href="#" id="forgot-link">Forgot password?</a>
+          </div>
+          <div class="password-input-group">
+            <input class="form-input-password" type="password" id="password" name="password" value="12345678" required>
+            <button class="btn-toggle-pw" type="button" id="toggle-password">Show</button>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label" for="remember">
+            <input type="checkbox" id="remember" name="remember" checked>
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <button class="btn-sign-in" type="submit" id="btn-submit">Sign In</button>
+
+        <p class="card-bottom-prompt">
+          Don't have an account? <a href="#" id="create-account">Create an account</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="login-bottom-copyright">
+      © 2026 My Website. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    // Password toggle
+    const passwordInput = document.getElementById("password");
+    const toggleBtn = document.getElementById("toggle-password");
+    if (toggleBtn && passwordInput) {
+      toggleBtn.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        toggleBtn.textContent = isPassword ? "Hide" : "Show";
+      });
+    }
+
+    // Login Form Submit: Alert "Login successful!" and redirect to home.html on clicking OK
+    const loginForm = document.getElementById("login-form");
+    if (loginForm) {
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Login successful!");
+        window.location.href = "home.html";
+      });
+    }
+
+    // Secondary links demo feedback
+    document.getElementById("forgot-link")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Password reset link sent to your email!");
+    });
+    document.getElementById("create-account")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Registration page demo!");
+    });
+  </script>
+</body>
+</html>

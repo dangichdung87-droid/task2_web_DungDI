@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Management System | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="index.html">Management System</a>
+      <div class="nav-right">
+        <div class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-btn" id="navDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            Home <span class="arrow">▾</span>
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="login.html#signup">Sign Up</a>
+            <a class="dropdown-item" href="#goal">Help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Slider -->
+    <section class="hero" id="hero" aria-label="Featured slides">
+      <div class="hero-slides">
+        <article class="hero-slide active" style="background-image: url('images/hero1.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="hero-eyebrow">WORK SMARTER, TOGETHER</p>
+            <h1>Achieve Your Goals</h1>
+            <p>Plan better, stay organized, and turn your goals into real achievements.</p>
+            <a class="hero-btn" href="login.html">Login Now <span>→</span></a>
+          </div>
+        </article>
+        <article class="hero-slide" style="background-image: url('images/hero2.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="hero-eyebrow">ONE TEAM, ONE VISION</p>
+            <h1>Better Team Collaboration</h1>
+            <p>Bring people and projects together with a simple, shared workspace.</p>
+            <a class="hero-btn" href="login.html">Join Us <span>→</span></a>
+          </div>
+        </article>
+        <article class="hero-slide" style="background-image: url('images/hero3.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="hero-eyebrow">LESS COMPLEXITY, MORE PROGRESS</p>
+            <h1>Management Made Simple</h1>
+            <p>Keep your work clear, track progress, and focus on what matters most.</p>
+            <a class="hero-btn" href="courses.html">Get Started <span>→</span></a>
+          </div>
+        </article>
+      </div>
+      <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">‹</button>
+      <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">›</button>
+      <div class="hero-dots" id="heroDots" aria-label="Choose slide">
+        <button class="hero-dot active" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- Goal Section (Target of Screenshot) -->
+    <section class="goal-section" id="goal">
+      <div class="container goal-container">
+        <!-- Left Side: Office photo -->
+        <div class="goal-left">
+          <div class="goal-photo-card">
+            <img src="images/office.jpg" alt="Goal of This Website - Office Workspace" class="goal-image" onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85'">
+          </div>
+        </div>
+
+        <!-- Right Side: Goal Information and 2x2 Feature Cards -->
+        <div class="goal-right">
+          <div class="goal-header">
+            <span class="goal-badge">OUR GOAL</span>
+            <h2 class="goal-title">Goal of This Website</h2>
+            <p class="goal-description">
+              Our goal is to provide a simple, secure, and efficient management system that helps users organize their work, manage information, track progress, and improve productivity — all in one place.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <!-- Card 1: Easy to Use -->
+            <article class="feature-card">
+              <div class="feature-icon-wrapper icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Easy to Use</h3>
+              <p class="feature-card-desc">A simple and clear interface for every user.</p>
+            </article>
+
+            <!-- Card 2: Secure -->
+            <article class="feature-card">
+              <div class="feature-icon-wrapper icon-amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Secure</h3>
+              <p class="feature-card-desc">Keep information protected with appropriate security.</p>
+            </article>
+
+            <!-- Card 3: Efficient -->
+            <article class="feature-card">
+              <div class="feature-icon-wrapper icon-orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Efficient</h3>
+              <p class="feature-card-desc">Save time by keeping tasks and information organized.</p>
+            </article>
+
+            <!-- Card 4: Better Productivity -->
+            <article class="feature-card">
+              <div class="feature-icon-wrapper icon-indigo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                  <path d="m4 14 6-6 4 4 6-6"></path>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Better Productivity</h3>
+              <p class="feature-card-desc">Track progress and work toward your goals.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action (CTA) Section -->
+    <section class="cta-section">
+      <div class="container cta-container">
+        <h2 class="cta-title">Ready to Get Started?</h2>
+        <p class="cta-subtitle">Create your account and start organizing your work today.</p>
+        <a class="cta-btn" href="login.html">Create an Account</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">Management System</div>
+      <p>© 2026 Management System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

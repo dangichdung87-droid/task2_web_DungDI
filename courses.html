@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Courses | Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="courses-page">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="index.html">Management System</a>
+      <div class="nav-right">
+        <div class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-btn" id="navDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            Home <span class="arrow">▾</span>
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="login.html#signup">Sign Up</a>
+            <a class="dropdown-item" href="index.html#goal">Help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="courses-main">
+    <div class="container">
+      <!-- Welcome Banner Card -->
+      <section class="courses-banner-card">
+        <h1>Welcome to My Website</h1>
+        <p>Learn web development with our courses.</p>
+      </section>
+
+      <!-- Our Courses Section -->
+      <section>
+        <h2 class="our-courses-title">Our Courses</h2>
+
+        <div class="courses-2x2-grid">
+          <!-- Course 1: HTML -->
+          <article class="course-card-custom course-card-html">
+            <div>
+              <h3>HTML</h3>
+              <p>Learn how to create the structure of web pages using headings, paragraphs, images, and links.</p>
+            </div>
+            <button class="btn-learn-more" data-course="HTML" type="button">Learn More</button>
+          </article>
+
+          <!-- Course 2: CSS -->
+          <article class="course-card-custom course-card-css">
+            <div>
+              <h3>CSS</h3>
+              <p>Learn how to style web pages with colors, fonts, spacing, and attractive layouts.</p>
+            </div>
+            <button class="btn-learn-more" data-course="CSS" type="button">Learn More</button>
+          </article>
+
+          <!-- Course 3: Bootstrap -->
+          <article class="course-card-custom course-card-bootstrap">
+            <div>
+              <h3>Bootstrap</h3>
+              <p>Build responsive websites quickly using Bootstrap's grid system and components.</p>
+            </div>
+            <button class="btn-learn-more" data-course="Bootstrap" type="button">Learn More</button>
+          </article>
+
+          <!-- Course 4: JavaScript -->
+          <article class="course-card-custom course-card-js">
+            <div>
+              <h3>JavaScript</h3>
+              <p>Make web pages interactive with button clicks, form validation, and dynamic content.</p>
+            </div>
+            <button class="btn-learn-more" data-course="JavaScript" type="button">Learn More</button>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Copyright 2026 Management System</p>
+    </div>
+  </footer>
+
+  <!-- Course Details Modal -->
+  <div class="modal-backdrop" id="course-modal" aria-hidden="true">
+    <section class="course-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-x" type="button" aria-label="Close dialog">×</button>
+      <div class="modal-icon" id="modal-icon">&lt;/&gt;</div>
+      <p class="eyebrow">COURSE DETAILS</p>
+      <h2 id="modal-title">Course Details</h2>
+      <p id="modal-description"></p>
+      <button class="modal-close-button" id="modal-close" type="button">Close</button>
+    </section>
+  </div>
+</body>
+</html>
